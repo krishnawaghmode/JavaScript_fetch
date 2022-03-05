@@ -102,3 +102,43 @@
  });         
 .catch((error) => document.write("Can't fetch data");
 ```
+## HTML form CRUD insert fetch()
+```javascript
+                   /*
+                      fetch("https:jsonplaceholder.typicode.com/posts",{
+	                     method:"POST",  //"PUT","DELETE","GET"
+	                     body:data,    //formData/json
+                       headers:{
+	                    'Content-type':'application/json'
+                         },
+
+                      }).then(response) => response.json()
+                      .then((json) => console.log(json));         
+                  */
+		  
+      <form id="myForm">
+           Title <input type="text" id="title"><br><br>
+           Body <input type="text" id="body"><br><br>
+           User Id <input type="text" id="userId"><br><br>
+           <input type="submit" id="saveform">
+      </form>
+      
+    
+    document.getElementById("saveform").addEventListener("click",function(e){
+	     e.preventDefault();
+
+
+     fetch("https:jsonplaceholder.typicode.com/posts",{
+	   method:"POST", 
+	   body:new FormData(document.getElement("myform")),    
+           headers:{
+	            'Content-type':'application/x-www-form-urlencoded',
+           },
+
+      })
+      .then((response) => response.json())
+      .then((json) => console.log(json));   
+     });
+```	 
+	 
+```
