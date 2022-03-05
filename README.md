@@ -7,19 +7,18 @@
 
 
   fetch(file/URL).then(function(response) {
-		   	return response.data;//text(),json()
-		});
+     return response.data;//text(),json()
+   });
 
 
 
        fetch(file/URL)
          .then(function(response) {
           return response.data;//text(),json()
-       }).then(function(response) {
-   
-			   console.log(response);
+        }).then(function(response) {
+            console.log(response);
       
-		  }).catch(function(error){
+        }).catch(function(error){
            console.log(error);
-		 });
+        });
 ```
