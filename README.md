@@ -22,7 +22,35 @@
            console.log(error);
         });
 ```
+## Quotes.json file Read fetch() Examples
+```javascript
+ /*   Quotes.json
+
+       [
+          {
+	          quote:"try try but don't cry",
+	          author:"life"
+          },
+          {
+              quote:"Growth is Life",
+	          author:"life"
+	       }
+       ]
+  */
+  fetch("Quotes.json")
+  .then(response) => response.json()
+  .then((data) => {
+
+   for (var x in data) {
+     console.log(`${data[x].quote} <br>`);
+     console.log(`${data[x].author} <br>`);
+  }
+
+});         
+.catch((error) => document.write("Can't fetch data")); 
+```
 ## file Read fetch() Examples
+
 ```javascript
  fetch("my_file/readme.txt")
         .then((response) => {
