@@ -26,8 +26,8 @@
 ```javascript
  fetch("my_file/readme.txt")
         .then((response) => {
-			console.log(response);
-		});      
+	console.log(response);
+});      
 
  //output
 
@@ -39,17 +39,17 @@
 
    fetch("my_file/readme.txt")
       .then((response) => {
-			return response.text();
-		}).then((data)=>{
-			console.log(data);
-		});   
+      return response.text();
+     }).then((data)=>{
+	console.log(data);
+ });   
 
-      // Shortcut 1
+ // Shortcut 1
       fetch("my_file/readme.txt")
      .then((response)=>response.text())
      .then((data)=>document.write(data));
 
-          // Shortcut 2
+ // Shortcut 2
        fetch("my_file/readme.txt")
       .then(res => res.text())
       .then(data => document.write(data));
