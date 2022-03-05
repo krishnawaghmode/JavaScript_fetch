@@ -54,3 +54,23 @@
       .then(res => res.text())
       .then(data => document.write(data));
 ```
+## Live server URL with fetch()
+```javascript
+//syntax
+ fetch("https:jsonplaceholder.typicode.com/users")
+.then(response) => response.json()
+.then((data) => console.log(data));         
+.catch((error) => document.write("Can't fetch data"); 
+
+//code
+ fetch("https:jsonplaceholder.typicode.com/users")
+.then(response) => response.json()
+.then((data) => {
+
+    for (var x in data) {
+      console.log(`${data[x].name} <br>`);
+      console.log(`${data[x].address.city} <br>`);
+    }
+    });         
+   .catch((error) => document.write("Can't fetch data");
+```
