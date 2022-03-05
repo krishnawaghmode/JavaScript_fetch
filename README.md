@@ -71,6 +71,6 @@
       console.log(`${data[x].name} <br>`);
       console.log(`${data[x].address.city} <br>`);
     }
-    });         
-   .catch((error) => document.write("Can't fetch data");
+ });         
+.catch((error) => document.write("Can't fetch data");
 ```
